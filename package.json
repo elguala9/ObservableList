@@ -1,0 +1,40 @@
+{
+  "name": "observable-list",
+  "version": "1.0.0",
+  "description": "An array with events",
+  "keywords": [
+    "events"
+  ],
+  "homepage": "https://github.com/elguala9/ObservableList#readme",
+  "bugs": {
+    "url": "https://github.com/elguala9/ObservableList/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elguala9/ObservableList.git"
+  },
+  "license": "MIT",
+  "author": "Luca Gualandi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b .",
+    "gen-exports": "npx gen-exports dist",
+    "prepare": "npm run build && npm run gen-exports"
+  },
+  "dependencies": {
+    "events": "^3.3.0",
+    "gen-exports": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/events": "^3.0.3",
+    "fast-glob": "^3.3.3"
+  },
+  "exports": {
+    "./src/ObservableList": {
+      "import": "./dist/src/ObservableList.js",
+      "require": "./dist/src/ObservableList.js",
+      "types": "./dist/src/ObservableList.d.ts"
+    }
+  }
+}
